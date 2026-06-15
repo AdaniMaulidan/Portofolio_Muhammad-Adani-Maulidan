@@ -60,16 +60,80 @@
   /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 16px 0;
     background: rgba(10,10,15,0.8);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
   }
-  nav .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+  nav .inner { max-width: 900px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; justify-content: space-between; align-items: center; }
   .nav-logo { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--teal); letter-spacing: 0.05em; }
   .nav-links { display: flex; gap: 28px; list-style: none; }
   .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--teal); }
+
+  /* Hamburger button — hidden on desktop */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 101;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background 0.2s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: var(--teal); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--teal); }
+
+  /* Mobile dropdown menu */
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0; right: 0;
+    background: rgba(10,10,15,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    z-index: 99;
+  }
+  .nav-mobile.open {
+    max-height: 320px;
+    padding: 16px 0 20px;
+  }
+  .nav-mobile ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .nav-mobile ul li a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 15px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-mobile ul li a:hover { color: var(--teal); }
 
   /* ── HERO ── */
   #hero {
@@ -448,12 +512,34 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 640px) {
+    /* Nav — show hamburger, hide desktop links */
+    .nav-hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-mobile { display: block; }
+
+    /* Layout */
     .about-grid { grid-template-columns: 1fr; }
     .edu-card { grid-template-columns: 1fr; }
     .edu-gpa { width: fit-content; }
-    nav .inner { gap: 16px; }
-    .nav-links { gap: 16px; }
     .contact-wrap { padding: 32px 20px; }
+
+    /* Hero */
+    .hero-content { padding: 40px 0; }
+    .hero-actions { flex-direction: column; }
+    .hero-actions .btn { justify-content: center; }
+
+    /* Terminal */
+    .terminal { max-width: 100%; }
+
+    /* Profile photo */
+    .profile-photo-wrap { width: 140px; height: 140px; }
+
+    /* Contact links */
+    .contact-links { flex-direction: column; align-items: stretch; }
+    .contact-link { justify-content: center; }
+
+    /* Projects grid */
+    .projects-grid { grid-template-columns: 1fr; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -470,6 +556,7 @@
 <nav>
   <div class="inner">
     <span class="nav-logo">adani.dev<span style="color:var(--muted)">_</span></span>
+    <!-- Desktop links -->
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -477,8 +564,24 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <!-- Hamburger button (mobile only) -->
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </nav>
+<!-- Mobile menu -->
+<div class="nav-mobile" id="navMobile">
+  <ul>
+    <li><a href="#about" class="nav-mobile-link">About</a></li>
+    <li><a href="#skills" class="nav-mobile-link">Skills</a></li>
+    <li><a href="#experience" class="nav-mobile-link">Experience</a></li>
+    <li><a href="#projects" class="nav-mobile-link">Projects</a></li>
+    <li><a href="#contact" class="nav-mobile-link">Contact</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -844,6 +947,35 @@
     const y = e.clientY / window.innerHeight;
     a1.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
     a2.style.transform = `translate(${-x * 20}px, ${-y * 20}px)`;
+  });
+
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('navMobile');
+  const mobileLinks = document.querySelectorAll('.nav-mobile-link');
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close menu when a link is clicked
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      closeMenu();
+    }
   });
 </script>
 </body>
