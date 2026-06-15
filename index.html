@@ -188,6 +188,54 @@
   /* ── ABOUT ── */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
   .about-text p { color: #A0A8B5; line-height: 1.8; margin-bottom: 16px; }
+  .about-right { display: flex; flex-direction: column; gap: 20px; }
+  .profile-photo-wrap {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 4px;
+  }
+  .profile-photo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), var(--violet));
+    z-index: 0;
+  }
+  .profile-photo-wrap::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0,245,196,0.15), rgba(123,97,255,0.15));
+    filter: blur(16px);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .profile-photo-wrap:hover::after { opacity: 1; }
+  .profile-photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border: 3px solid var(--bg);
+    transition: transform 0.4s ease;
+  }
+  .profile-photo-wrap:hover .profile-photo { transform: scale(1.04); }
+  .profile-name-tag {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+  .profile-name-tag span { color: var(--teal); }
   .about-stats { display: flex; flex-direction: column; gap: 16px; }
   .stat-card {
     background: var(--bg-card);
@@ -495,18 +543,24 @@
         <p>Pengalaman nyata sebagai Fullstack Developer selama magang di perusahaan ISP membuat saya terbiasa bekerja di lingkungan produksi — dari analisis kebutuhan sistem hingga integrasi dengan teknologi jaringan.</p>
         <p>Saya percaya bahwa kode yang baik adalah kode yang bisa dipahami orang lain, dan desain yang baik adalah desain yang tidak terasa seperti desain.</p>
       </div>
-      <div class="about-stats">
-        <div class="stat-card">
-          <div class="stat-num">7+</div>
-          <div class="stat-label">Proyek selesai (web, mobile, desktop)</div>
+      <div class="about-right">
+        <div class="profile-photo-wrap">
+          <img src="Adani 1 .jpg" alt="Muhammad Adani Maulidan" class="profile-photo">
         </div>
-        <div class="stat-card">
-          <div class="stat-num">3.57</div>
-          <div class="stat-label">IPK — Politeknik Negeri Jember</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">Bahasa & framework yang pernah digunakan</div>
+        <div class="profile-name-tag"><span>@</span>adani.dev</div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">7+</div>
+            <div class="stat-label">Proyek selesai (web, mobile, desktop)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">3.57</div>
+            <div class="stat-label">IPK — Politeknik Negeri Jember</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Bahasa & framework yang pernah digunakan</div>
+          </div>
         </div>
       </div>
     </div>
