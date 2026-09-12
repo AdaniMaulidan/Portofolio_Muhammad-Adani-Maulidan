@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Proyek — Muhammad Adani Maulidan</title>
+<meta name="description" content="Detail proyek Muhammad Adani Maulidan, Fullstack Developer dan UI/UX Designer.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<div class="ambient ambient-1"></div>
+<div class="ambient ambient-2"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="inner">
+    <a href="index.html" class="nav-logo">adani.dev<span style="color:var(--muted)">_</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <ul>
+    <li><a href="index.html#about"      class="nav-mobile-link">About</a></li>
+    <li><a href="index.html#skills"     class="nav-mobile-link">Skills</a></li>
+    <li><a href="index.html#experience" class="nav-mobile-link">Experience</a></li>
+    <li><a href="index.html#projects"   class="nav-mobile-link">Projects</a></li>
+    <li><a href="index.html#contact"    class="nav-mobile-link">Contact</a></li>
+  </ul>
+</div>
+
+<!-- 404 / fallback jika ?p= tidak dikenal -->
+<div class="pd-not-found" id="pdNotFound" style="display:none;">
+  <div class="container">
+    <div class="pd-nf-inner">
+      <div class="pd-nf-code">404</div>
+      <p class="pd-nf-msg">Proyek tidak ditemukan.</p>
+      <a href="index.html#projects" class="btn-selengkapnya">&#8592; Kembali ke Portofolio</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 1 — DINAS PPPAKB URL: projects.html?p=dinas-pppakb -->
+<article class="pd-page" data-project="dinas-pppakb">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="pd-breadcrumb" aria-label="breadcrumb">
+      <a href="index.html#projects" class="pd-back">&#8592; Semua Proyek</a>
+      <span class="pd-bc-sep">/</span>
+      <span class="pd-bc-current">Website Dinas PPPAKB</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="pd-header">
+      <div class="pd-icon">&#127963;&#65039;</div>
+      <div class="pd-header-info">
+        <div class="pd-type">Web &middot; UI/UX &middot; Skripsi</div>
+        <h1 class="pd-title">Website Dinas PPPAKB Kab. Jember</h1>
+        <div class="pd-role">UI/UX Researcher &middot; Designer &middot; Fullstack Dev</div>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <div class="pd-body">
+      <div class="pd-main">
+        <div class="pd-section-label">Deskripsi</div>
+        <p class="pd-desc">Proyek skripsi yang berfokus pada redesain website instansi pemerintah Dinas PPPAKB Kabupaten Jember menggunakan metode <strong>Design Thinking</strong> secara end-to-end: empathize, define, ideate, prototype, hingga testing.</p>
+        <p class="pd-desc">Hasil evaluasi menggunakan <strong>System Usability Scale (SUS)</strong> menunjukkan peningkatan skor usability yang signifikan dibandingkan website lama.</p>
+
+        <!-- ── DATA SUS COMPARISON CHART ── -->
+        <div class="sus-chart-container">
+          <canvas id="susChart"></canvas>
+        </div>
+
+        <!-- ── HIGHLIGHT RATA-RATA SUS ── -->
+        <div class="sus-highlight">
+          <div class="sus-hl-item sus-hl-old">
+            <div class="sus-hl-label">Rata-Rata Web Lama</div>
+            <div class="sus-hl-score">51.01</div>
+            <div class="sus-hl-cat">Cukup / Marginal</div>
+          </div>
+          <div class="sus-hl-item sus-hl-new">
+            <div class="sus-hl-label">Rata-Rata Web Baru</div>
+            <div class="sus-hl-score">72.57</div>
+            <div class="sus-hl-cat">Baik / Di atas rata-rata</div>
+          </div>
+        </div>
+
+        <div class="pd-section-label">Kontribusi Saya</div>
+        <ul class="pd-list">
+          <li>Riset pengguna: user interview &amp; observasi langsung</li>
+          <li>Analisis menggunakan metode design thinking</li>
+          <li>Membuat wireframe &amp; prototype interaktif di Figma</li>
+          <li>Mengembangkan website baru fullstack dengan Laravel &amp; MySQL</li>
+          <li>Melakukan Testing menggunakan SUS dan Maze</li>
+        </ul>
+
+        <!-- ── GALERI SCREENSHOT ── -->
+        <div class="pd-section-label" style="margin-top:40px">Lampiran</div>
+        <div class="pd-gallery">
+
+          <!-- Hero image -->
+          <div class="pd-gallery-hero">
+            <div class="pd-img-wrap" data-lightbox="Picture/8. DS.png" data-caption="Dinas PPPAKB — Data Statistik / Desa Sahabat Anak">
+              <img src="Picture/8. DS.png"
+                   alt="Halaman Data Statistik"
+                   class="pd-img-hero">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269; Perbesar</span>
+              </div>
+              <div class="pd-img-caption">Dinas PPPAKB — Data Statistik</div>
+            </div>
+          </div>
+
+          <!-- Screenshot grid 2x2 -->
+          <div class="pd-gallery-grid pd-gallery-grid--2col">
+            <div class="pd-img-wrap" data-lightbox="Picture/8. Dashboard.png" data-caption="Dinas PPPAKB — Dashboard Utama">
+              <img src="Picture/8. Dashboard.png"
+                   alt="Dinas PPPAKB dashboard"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Dashboard Utama</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/8. Layanan.png" data-caption="Halaman Layanan Masyarakat">
+              <img src="Picture/8. Layanan.png"
+                   alt="Halaman Layanan"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Layanan Masyarakat</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/8. Uptd.png" data-caption="Halaman UPTD">
+              <img src="Picture/8. Uptd.png"
+                   alt="Halaman UPTD"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Profil UPTD</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/8. History.png" data-caption="Sejarah &amp; Riwayat Instansi">
+              <img src="Picture/8. History.png"
+                   alt="Halaman Riwayat"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Sejarah Instansi</div>
+            </div>
+          </div>
+        </div>
+        <!-- /GALERI -->
+
+      </div>
+
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <div class="pd-info-label">Tech Stack</div>
+          <div class="pd-stack">
+            <span class="stack-pill">Laravel</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">Figma</span>
+            <span class="stack-pill">Design Thinking</span>
+          </div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Kategori</div>
+          <div class="pd-info-val">Web &middot; UI/UX &middot; Skripsi</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Peran</div>
+          <div class="pd-info-val">UI/UX Researcher, Designer, Fullstack Developer</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Status</div>
+          <div class="pd-status pd-status--done">&#10003; Selesai</div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Navigasi antar proyek -->
+    <div class="pd-nav-row">
+      <span></span>
+      <a href="projects.html?p=crm-lilly" class="pd-nav-btn">CRM Lilly ISP &#8594;</a>
+    </div>
+  </div>
+</article>
+
+<!-- PROJECT 2 — CRM LILLY ISP URL: projects.html?p=crm-lilly -->
+<article class="pd-page" data-project="crm-lilly">
+  <div class="container">
+    <nav class="pd-breadcrumb" aria-label="breadcrumb">
+      <a href="index.html#projects" class="pd-back">&#8592; Semua Proyek</a>
+      <span class="pd-bc-sep">/</span>
+      <span class="pd-bc-current">CRM Lilly ISP</span>
+    </nav>
+    <header class="pd-header">
+      <div class="pd-icon">&#128225;</div>
+      <div class="pd-header-info">
+        <div class="pd-type">Web &middot; CRM</div>
+        <h1 class="pd-title">CRM Lilly ISP</h1>
+        <div class="pd-role">Fullstack Developer</div>
+      </div>
+    </header>
+    <div class="pd-body">
+      <div class="pd-main">
+        <div class="pd-section-label">Deskripsi</div>
+        <p class="pd-desc">Sistem <strong>Customer Relationship Management (CRM)</strong> untuk perusahaan ISP PT. Empat Inti Nukleon, terintegrasi dengan <strong>Winbox</strong> untuk manajemen jaringan MikroTik secara real-time.</p>
+        <p class="pd-desc">Mencakup manajemen pelanggan, paket layanan, pembayaran, dan monitoring jaringan dari satu dashboard terpusat. Dikerjakan selama magang.</p>
+
+        <div class="pd-section-label">Kontribusi Saya</div>
+        <ul class="pd-list">
+          <li>Mengembangkan fitur registrasi pelanggan terintegrasi Winbox (Nuxt.js &amp; Golang)</li>
+          <li>Mengembangkan fitur instalasi pelanggan terintegrasi Winbox (Nuxt.js &amp; Golang)</li>
+        </ul>
+
+        <!-- ── GALERI SCREENSHOT ── -->
+        <div class="pd-section-label" style="margin-top:40px">Lampiran</div>
+        <div class="pd-gallery">
+
+          <!-- Hero image -->
+          <div class="pd-gallery-hero">
+            <div class="pd-img-wrap" data-lightbox="Picture/7. Landing.png" data-caption="CRM Lilly ISP — Landing Page">
+              <img src="Picture/7. Landing.png"
+                   alt="CRM Lilly ISP landing page"
+                   class="pd-img-hero">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269; Perbesar</span>
+              </div>
+              <div class="pd-img-caption">CRM Lilly ISP — Landing Page</div>
+            </div>
+          </div>
+
+          <!-- Screenshot grid 2x2 -->
+          <div class="pd-gallery-grid pd-gallery-grid--2col">
+            <div class="pd-img-wrap" data-lightbox="Picture/7. CLogin.png" data-caption="Customer Login">
+              <img src="Picture/7. CLogin.png"
+                   alt="Halaman customer login"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Customer Login</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/7. ELogin.png" data-caption="Employee Login">
+              <img src="Picture/7. ELogin.png"
+                   alt="Halaman employee login"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Employee Login</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/7. Tabel Customer.png" data-caption="Manajemen Pelanggan">
+              <img src="Picture/7. Tabel Customer.png"
+                   alt="Halaman tabel customer"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Tabel Pelanggan</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/7. Form Customer.png" data-caption="Form Registrasi Pelanggan">
+              <img src="Picture/7. Form Customer.png"
+                   alt="Form customer"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Form Registrasi</div>
+            </div>
+          </div>
+        </div>
+        <!-- /GALERI -->
+
+      </div>
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <div class="pd-info-label">Tech Stack</div>
+          <div class="pd-stack">
+            <span class="stack-pill">Nuxt.js</span>
+            <span class="stack-pill">Golang</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">Winbox</span>
+            <span class="stack-pill">REST API</span>
+          </div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Kategori</div>
+          <div class="pd-info-val">Web &middot; CRM</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Peran</div>
+          <div class="pd-info-val">Fullstack Developer (Magang)</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Periode</div>
+          <div class="pd-info-val">Agt 2025 &mdash; Des 2025</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Status</div>
+          <div class="pd-status pd-status--done">&#10003; Selesai</div>
+        </div>
+      </aside>
+    </div>
+    <div class="pd-nav-row">
+      <a href="projects.html?p=dinas-pppakb" class="pd-nav-btn pd-nav-btn--prev">&#8592; Dinas PPPAKB</a>
+      <a href="projects.html?p=papaya-tech"   class="pd-nav-btn">Papaya Tech &#8594;</a>
+    </div>
+  </div>
+</article>
+
+<!-- PROJECT 3 — PAPAYA TECH URL: projects.html?p=papaya-tech -->
+<article class="pd-page" data-project="papaya-tech">
+  <div class="container">
+    <nav class="pd-breadcrumb" aria-label="breadcrumb">
+      <a href="index.html#projects" class="pd-back">&#8592; Semua Proyek</a>
+      <span class="pd-bc-sep">/</span>
+      <span class="pd-bc-current">Papaya Tech</span>
+    </nav>
+    <header class="pd-header">
+      <div class="pd-icon">&#127816;</div>
+      <div class="pd-header-info">
+        <div class="pd-type">Web &middot; AI</div>
+        <h1 class="pd-title">Papaya Tech</h1>
+        <div class="pd-role">Frontend Developer</div>
+      </div>
+    </header>
+    <div class="pd-body">
+      <div class="pd-main">
+        <div class="pd-section-label">Deskripsi</div>
+        <p class="pd-desc">Sistem cerdas untuk <strong>deteksi kematangan buah pepaya</strong> secara otomatis melalui analisis gambar berbasis AI. Pengguna mengunggah foto, sistem mengklasifikasikan tingkat kematangan secara real-time.</p>
+        <p class="pd-desc">Model AI dilatih untuk mengenali perbedaan warna, tekstur, dan karakteristik visual buah pepaya pada berbagai tingkat kematangan.</p>
+
+        <div class="pd-section-label">Kontribusi Saya</div>
+        <ul class="pd-list">
+          <li>Membangun UI web yang responsif dengan Laravel Blade, HTML, CSS, &amp; JS</li>
+          <li>Mengembangkan alur UX untuk proses upload foto hingga hasil deteksi</li>
+          <li>Mengimplementasikan desain UI user friendly ke kode frontend fungsional</li>
+        </ul>
+
+        <!-- ── GALERI SCREENSHOT ── -->
+        <div class="pd-section-label" style="margin-top:40px">Lampiran</div>
+        <div class="pd-gallery">
+
+          <!-- Hero image -->
+          <div class="pd-gallery-hero">
+            <div class="pd-img-wrap" data-lightbox="Picture/6. Landing.png" data-caption="Papaya Tech — Landing Page">
+              <img src="Picture/6. Landing.png"
+                   alt="Papaya Tech landing page"
+                   class="pd-img-hero">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269; Perbesar</span>
+              </div>
+              <div class="pd-img-caption">Papaya Tech — Landing Page</div>
+            </div>
+          </div>
+
+          <!-- Screenshot grid -->
+          <div class="pd-gallery-grid">
+            <div class="pd-img-wrap" data-lightbox="Picture/6. Login.png" data-caption="Login — Web">
+              <img src="Picture/6. Login.png"
+                   alt="Halaman login website"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Login — Web</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/6. Dashboardjpg.jpg" data-caption="Dashboard — Ringkasan Data">
+              <img src="Picture/6. Dashboardjpg.jpg"
+                   alt="Dashboard Papaya Tech"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Dashboard</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/6. Deteksi.jpg" data-caption="Hasil Deteksi Kematangan">
+              <img src="Picture/6. Deteksi.jpg"
+                   alt="Halaman hasil deteksi AI"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Hasil Deteksi</div>
+            </div>
+          </div>
+        </div>
+        <!-- /GALERI -->
+
+      </div>
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <div class="pd-info-label">Tech Stack</div>
+          <div class="pd-stack">
+            <span class="stack-pill">Laravel</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">AI-based</span>
+          </div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Kategori</div>
+          <div class="pd-info-val">Web &middot; AI</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Peran</div>
+          <div class="pd-info-val">Frontend Developer</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Status</div>
+          <div class="pd-status pd-status--done">&#10003; Selesai</div>
+        </div>
+      </aside>
+    </div>
+    <div class="pd-nav-row">
+      <a href="projects.html?p=crm-lilly" class="pd-nav-btn pd-nav-btn--prev">&#8592; CRM Lilly ISP</a>
+      <a href="projects.html?p=is-usg"    class="pd-nav-btn">IS-USG &#8594;</a>
+    </div>
+  </div>
+</article>
+
+<!-- PROJECT 4 — IS-USG URL: projects.html?p=is-usg -->
+<article class="pd-page" data-project="is-usg">
+  <div class="container">
+    <nav class="pd-breadcrumb" aria-label="breadcrumb">
+      <a href="index.html#projects" class="pd-back">&#8592; Semua Proyek</a>
+      <span class="pd-bc-sep">/</span>
+      <span class="pd-bc-current">IS-USG</span>
+    </nav>
+    <header class="pd-header">
+      <div class="pd-icon">&#128017;</div>
+      <div class="pd-header-info">
+        <div class="pd-type">Web &middot; Mobile &middot; AI</div>
+        <h1 class="pd-title">IS-USG</h1>
+        <div class="pd-role">Frontend Developer</div>
+      </div>
+    </header>
+    <div class="pd-body">
+      <div class="pd-main">
+        <div class="pd-section-label">Deskripsi</div>
+        <p class="pd-desc">Sistem deteksi <strong>kebuntingan &amp; kesehatan domba</strong> berdasarkan hasil USG dan kondisi fisik menggunakan kecerdasan buatan. Membantu peternak &amp; dokter hewan mengambil keputusan lebih akurat.</p>
+        <p class="pd-desc">Platform tersedia dalam dua versi: <strong>website</strong> (manajemen &amp; laporan) dan <strong>mobile Flutter</strong> (penggunaan di lapangan).</p>
+
+        <div class="pd-section-label">Kontribusi Saya</div>
+        <ul class="pd-list">
+          <li>Membangun antarmuka web responsif dengan Laravel Blade &amp; JS</li>
+          <li>Merancang desain UI yang konsisten dan berpusat pada kenyamanan pengguna</li>
+          <li>Membangun alur UX intuitif untuk kemudahan pengguna</li>
+        </ul>
+
+        <!-- ── GALERI SCREENSHOT ── -->
+        <div class="pd-section-label" style="margin-top:40px">Lampiran</div>
+        <div class="pd-gallery">
+
+          <!-- Hero image -->
+          <div class="pd-gallery-hero">
+            <div class="pd-img-wrap" data-lightbox="Picture/5. is-usg.png" data-caption="IS-USG — Mockup Aplikasi">
+              <img src="Picture/5. is-usg.png"
+                   alt="IS-USG mockup aplikasi"
+                   class="pd-img-hero">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269; Perbesar</span>
+              </div>
+              <div class="pd-img-caption">IS-USG — Mockup Aplikasi</div>
+            </div>
+          </div>
+
+          <!-- Screenshot grid 2x2 -->
+          <div class="pd-gallery-grid pd-gallery-grid--2col">
+            <div class="pd-img-wrap" data-lightbox="Picture/5. Landing.png" data-caption="Landing Page — Section 1">
+              <img src="Picture/5. Landing.png"
+                   alt="Landing page IS-USG section 1"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Landing Page — Section 1</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/5. Landing 2.png" data-caption="Landing Page — Section 2">
+              <img src="Picture/5. Landing 2.png"
+                   alt="Landing page IS-USG section 2"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Landing Page — Section 2</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/5. Landing 3.png" data-caption="Landing Page — Section 3">
+              <img src="Picture/5. Landing 3.png"
+                   alt="Landing page IS-USG section 3"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Landing Page — Section 3</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/5. Landing 4.png" data-caption="Landing Page — Section 4">
+              <img src="Picture/5. Landing 4.png"
+                   alt="Landing page IS-USG section 4"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Landing Page — Section 4</div>
+            </div>
+          </div>
+        </div>
+        <!-- /GALERI -->
+
+      </div>
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <div class="pd-info-label">Tech Stack</div>
+          <div class="pd-stack">
+            <span class="stack-pill">Laravel</span>
+            <span class="stack-pill">Flutter</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">AI-based</span>
+          </div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Kategori</div>
+          <div class="pd-info-val">Web &middot; Mobile &middot; AI</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Peran</div>
+          <div class="pd-info-val">Frontend Developer</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Status</div>
+          <div class="pd-status pd-status--done">&#10003; Selesai</div>
+        </div>
+      </aside>
+    </div>
+    <div class="pd-nav-row">
+      <a href="projects.html?p=papaya-tech"   class="pd-nav-btn pd-nav-btn--prev">&#8592; Papaya Tech</a>
+      <a href="projects.html?p=jember-wonder" class="pd-nav-btn">Jember Wonder &#8594;</a>
+    </div>
+  </div>
+</article>
+
+<!-- PROJECT 5 — JEMBER WONDER URL: projects.html?p=jember-wonder -->
+<article class="pd-page" data-project="jember-wonder">
+  <div class="container">
+    <nav class="pd-breadcrumb" aria-label="breadcrumb">
+      <a href="index.html#projects" class="pd-back">&#8592; Semua Proyek</a>
+      <span class="pd-bc-sep">/</span>
+      <span class="pd-bc-current">Jember Wonder</span>
+    </nav>
+    <header class="pd-header">
+      <div class="pd-icon">&#128506;&#65039;</div>
+      <div class="pd-header-info">
+        <div class="pd-type">Web &middot; Mobile</div>
+        <h1 class="pd-title">Jember Wonder</h1>
+        <div class="pd-role">Frontend &middot; Mobile Developer</div>
+      </div>
+    </header>
+    <div class="pd-body">
+      <div class="pd-main">
+        <div class="pd-section-label">Deskripsi</div>
+        <p class="pd-desc">Aplikasi informasi wisata <strong>Kabupaten Jember</strong> berbasis web &amp; mobile untuk mempromosikan destinasi wisata lokal. Pengguna dapat menjelajahi tempat wisata, event, dan budaya Jember.</p>
+        <p class="pd-desc">Dikembangkan sebagai upaya digitalisasi pariwisata daerah dengan antarmuka yang ramah pengguna.</p>
+
+        <div class="pd-section-label">Kontribusi Saya</div>
+        <ul class="pd-list">
+          <li>Membangun antarmuka web responsif dengan Laravel Blade</li>
+          <li>Mengembangkan aplikasi mobile cross-platform menggunakan Flutter</li>
+          <li>Mengintegrasikan REST API untuk sinkronisasi data antara platform web dan mobile</li>
+        </ul>
+
+        <!-- ── GALERI SCREENSHOT ── -->
+        <div class="pd-section-label" style="margin-top:40px">Lampiran</div>
+        <div class="pd-gallery">
+
+          <!-- Hero image -->
+          <div class="pd-gallery-hero">
+            <div class="pd-img-wrap" data-lightbox="Picture/4. JWonder.png" data-caption="Jember Wonder — Landing Page">
+              <img src="Picture/4. JWonder.png"
+                   alt="Jember Wonder landing page"
+                   class="pd-img-hero">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269; Perbesar</span>
+              </div>
+              <div class="pd-img-caption">Jember Wonder — Landing Page</div>
+            </div>
+          </div>
+
+          <!-- Screenshot grid -->
+          <div class="pd-gallery-grid">
+            <div class="pd-img-wrap" data-lightbox="Picture/4. Login.png" data-caption="Login — Web">
+              <img src="Picture/4. Login.png"
+                   alt="Halaman login website"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Login — Web</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/4. Wisata.png" data-caption="Daftar Wisata — Web">
+              <img src="Picture/4. Wisata.png"
+                   alt="Daftar wisata web"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Daftar Wisata — Web</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/4. AWisata.png" data-caption="Daftar Wisata — Mobile">
+              <img src="Picture/4. AWisata.png"
+                   alt="Daftar wisata mobile"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Daftar Wisata — Mobile</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/4. MWellcome.png" data-caption="Welcome Screen — Mobile">
+              <img src="Picture/4. MWellcome.png"
+                   alt="Welcome screen aplikasi mobile"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Welcome — Mobile</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/4. MLogin.png" data-caption="Login — Mobile">
+              <img src="Picture/4. MLogin.png"
+                   alt="Halaman login aplikasi mobile"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Login — Mobile</div>
+            </div>
+          </div>
+        </div>
+        <!-- /GALERI -->
+
+      </div>
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <div class="pd-info-label">Tech Stack</div>
+          <div class="pd-stack">
+            <span class="stack-pill">Laravel</span>
+            <span class="stack-pill">Flutter</span>
+            <span class="stack-pill">MySQL</span>
+          </div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Kategori</div>
+          <div class="pd-info-val">Web &middot; Mobile</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Peran</div>
+          <div class="pd-info-val">Frontend &amp; Mobile Developer</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Status</div>
+          <div class="pd-status pd-status--done">&#10003; Selesai</div>
+        </div>
+      </aside>
+    </div>
+    <div class="pd-nav-row">
+      <a href="projects.html?p=is-usg"       class="pd-nav-btn pd-nav-btn--prev">&#8592; IS-USG</a>
+      <a href="projects.html?p=rental-power" class="pd-nav-btn">Rental Power &#8594;</a>
+    </div>
+  </div>
+</article>
+
+<!-- PROJECT 6 — RENTAL POWER GAMES URL: projects.html?p=rental-power -->
+<article class="pd-page" data-project="rental-power">
+  <div class="container">
+    <nav class="pd-breadcrumb" aria-label="breadcrumb">
+      <a href="index.html#projects" class="pd-back">&#8592; Semua Proyek</a>
+      <span class="pd-bc-sep">/</span>
+      <span class="pd-bc-current">Rental Power Games</span>
+    </nav>
+    <header class="pd-header">
+      <div class="pd-icon">&#127918;</div>
+      <div class="pd-header-info">
+        <div class="pd-type">Web &middot; Mobile</div>
+        <h1 class="pd-title">Rental Power Games</h1>
+        <div class="pd-role">Project Manager &middot; Frontend Dev</div>
+      </div>
+    </header>
+    <div class="pd-body">
+      <div class="pd-main">
+        <div class="pd-section-label">Deskripsi</div>
+        <p class="pd-desc">Sistem informasi <strong>booking rental PlayStation</strong> yang mengelola jadwal sewa, ketersediaan konsol, dan manajemen member secara terpadu — tersedia di web (admin) dan mobile (pelanggan).</p>
+        <p class="pd-desc">Sebagai <strong>Project Manager</strong>, saya memimpin tim, mengatur sprint, mendistribusikan tugas, serta memastikan deliverable sesuai timeline.</p>
+
+        <div class="pd-section-label">Kontribusi Saya</div>
+        <ul class="pd-list">
+          <li>Memimpin pengembangan proyek secara end-to-end sebagai Project Manager</li>
+          <li>Membangun UI dashboard admin web menggunakan PHP Native</li>
+          <li>Merancang alur bisnis sistem booking &amp; manajemen jadwal konsol</li>
+          <li>Berkolaborasi dengan mobile developer untuk konsistensi fitur</li>
+        </ul>
+
+        <!-- ── GALERI SCREENSHOT ── -->
+        <div class="pd-section-label" style="margin-top:40px">Lampiran</div>
+        <div class="pd-gallery">
+
+          <!-- Hero image -->
+          <div class="pd-gallery-hero">
+            <div class="pd-img-wrap" data-lightbox="Picture/3. RPG.png" data-caption="Rental Power Games — Landing Page">
+              <img src="Picture/3. RPG.png"
+                   alt="Rental Power Games landing page"
+                   class="pd-img-hero">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269; Perbesar</span>
+              </div>
+              <div class="pd-img-caption">Rental Power Games — Landing Page</div>
+            </div>
+          </div>
+
+          <!-- Screenshot grid 2×2 -->
+          <div class="pd-gallery-grid pd-gallery-grid--2col">
+            <div class="pd-img-wrap" data-lightbox="Picture/3. Login.png" data-caption="Login — Halaman Masuk Web">
+              <img src="Picture/3. Login.png"
+                   alt="Halaman login website"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Login — Web</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/3. Dashboard.png" data-caption="Dashboard — Manajemen Rental Web">
+              <img src="Picture/3. Dashboard.png"
+                   alt="Dashboard manajemen rental web"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Dashboard — Web</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/3. MLogin.png" data-caption="Login — Halaman Masuk Mobile">
+              <img src="Picture/3. MLogin.png"
+                   alt="Halaman login aplikasi mobile"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Login — Mobile</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/3. MDashboard.png" data-caption="Dashboard — Manajemen Rental Mobile">
+              <img src="Picture/3. MDashboard.png"
+                   alt="Dashboard manajemen rental mobile"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay"><span class="pd-img-zoom">&#128269;</span></div>
+              <div class="pd-img-caption">Dashboard — Mobile</div>
+            </div>
+          </div>
+        </div>
+        <!-- /GALERI -->
+
+      </div>
+
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <div class="pd-info-label">Tech Stack</div>
+          <div class="pd-stack">
+            <span class="stack-pill">PHP</span>
+            <span class="stack-pill">Android Native</span>
+            <span class="stack-pill">MySQL</span>
+          </div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Kategori</div>
+          <div class="pd-info-val">Web &middot; Mobile</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Peran</div>
+          <div class="pd-info-val">Project Manager &amp; Frontend Dev</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Status</div>
+          <div class="pd-status pd-status--done">&#10003; Selesai</div>
+        </div>
+      </aside>
+    </div>
+    <div class="pd-nav-row">
+      <a href="projects.html?p=jember-wonder" class="pd-nav-btn pd-nav-btn--prev">&#8592; Jember Wonder</a>
+      <a href="projects.html?p=perpustakaan"  class="pd-nav-btn">Perpustakaan &#8594;</a>
+    </div>
+  </div>
+</article>
+
+<!-- PROJECT 7 — SISTEM INFORMASI PERPUSTAKAAN URL: projects.html?p=perpustakaan -->
+<article class="pd-page" data-project="perpustakaan">
+  <div class="container">
+    <nav class="pd-breadcrumb" aria-label="breadcrumb">
+      <a href="index.html#projects" class="pd-back">&#8592; Semua Proyek</a>
+      <span class="pd-bc-sep">/</span>
+      <span class="pd-bc-current">Sistem Informasi Perpustakaan</span>
+    </nav>
+    <header class="pd-header">
+      <div class="pd-icon">&#128218;</div>
+      <div class="pd-header-info">
+        <div class="pd-type">Desktop</div>
+        <h1 class="pd-title">Sistem Informasi Perpustakaan</h1>
+        <div class="pd-role">Project Manager</div>
+      </div>
+    </header>
+    <div class="pd-body">
+      <div class="pd-main">
+        <div class="pd-section-label">Deskripsi</div>
+        <p class="pd-desc">Aplikasi desktop untuk <strong>manajemen perpustakaan</strong>: koleksi buku, data anggota, transaksi peminjaman, dan pengembalian. Dikembangkan dalam dua versi.</p>
+        <p class="pd-desc"><strong>Versi 2 (V2)</strong> menghadirkan integrasi <strong>teknologi RFID</strong> untuk otomatisasi peminjaman &amp; pengembalian, serta fitur <strong>cetak struk</strong> otomatis dengan thermal printer.</p>
+
+        <div class="pd-section-label">Kontribusi Saya</div>
+        <ul class="pd-list">
+          <li>Menganalisis kebutuhan bisnis dan merancang alur sistem perpustakaan</li>
+          <li>Memimpin pengembangan aplikasi V1 &amp; V2 sebagai Project Manager</li>
+          <li>Menyusun timeline dan mendistribusikan task kepada tim developer</li>
+        </ul>
+
+        <!-- ── GALERI SCREENSHOT ── -->
+        <div class="pd-section-label" style="margin-top:40px">Lampiran</div>
+        <div class="pd-gallery">
+
+          <!-- Hero image -->
+          <div class="pd-gallery-hero">
+            <div class="pd-img-wrap" data-lightbox="Picture/1. elibrarypolije.png" data-caption="e-Library Polije — Tampilan Utama">
+              <img src="Picture/1. elibrarypolije.png"
+                   alt="e-Library Polije tampilan utama"
+                   class="pd-img-hero">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269; Perbesar</span>
+              </div>
+              <div class="pd-img-caption">e-Library Polije — Tampilan Utama</div>
+            </div>
+          </div>
+
+          <!-- Screenshot grid -->
+          <div class="pd-gallery-grid">
+            <div class="pd-img-wrap" data-lightbox="Picture/1. Dashboard.png" data-caption="Dashboard — Ringkasan Data">
+              <img src="Picture/1. Dashboard.png"
+                   alt="Dashboard sistem perpustakaan"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269;</span>
+              </div>
+              <div class="pd-img-caption">Dashboard</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/1. Daftar.png" data-caption="Daftar Buku — Manajemen Koleksi">
+              <img src="Picture/1. Daftar.png"
+                   alt="Halaman daftar buku"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269;</span>
+              </div>
+              <div class="pd-img-caption">Daftar Buku</div>
+            </div>
+            <div class="pd-img-wrap" data-lightbox="Picture/1. Laporan.png" data-caption="Laporan — Rekap Peminjaman">
+              <img src="Picture/1. Laporan.png"
+                   alt="Halaman laporan peminjaman"
+                   class="pd-img-thumb">
+              <div class="pd-img-overlay">
+                <span class="pd-img-zoom">&#128269;</span>
+              </div>
+              <div class="pd-img-caption">Laporan</div>
+            </div>
+          </div>
+        </div>
+        <!-- /GALERI -->
+
+      </div>
+
+      <aside class="pd-sidebar">
+        <div class="pd-info-card">
+          <div class="pd-info-label">Tech Stack</div>
+          <div class="pd-stack">
+            <span class="stack-pill">Java</span>
+            <span class="stack-pill">RFID</span>
+            <span class="stack-pill">MySQL</span>
+          </div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Kategori</div>
+          <div class="pd-info-val">Desktop Application</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Peran</div>
+          <div class="pd-info-val">Project Manager</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Versi</div>
+          <div class="pd-info-val">V1 &amp; V2 (RFID + Thermal Print)</div>
+        </div>
+        <div class="pd-info-card">
+          <div class="pd-info-label">Status</div>
+          <div class="pd-status pd-status--done">&#10003; Selesai</div>
+        </div>
+      </aside>
+    </div>
+    <div class="pd-nav-row">
+      <a href="projects.html?p=rental-power" class="pd-nav-btn pd-nav-btn--prev">&#8592; Rental Power</a>
+      <a href="index.html#projects"          class="pd-nav-btn">&#8617; Semua Proyek</a>
+    </div>
+  </div>
+</article>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <span>&copy; 2026 <span class="ft-teal">Muhammad Adani Maulidan</span></span>
+    <span>&copy; 2026 Muhammad Adani Maulidan. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="projects.js"></script>
+</body>
+</html>

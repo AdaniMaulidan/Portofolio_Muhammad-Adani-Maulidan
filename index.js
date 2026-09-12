@@ -1,4 +1,4 @@
-﻿// Scroll reveal
+// Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -49,4 +49,40 @@ document.addEventListener('click', (e) => {
   if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
     closeMenu();
   }
+});
+
+// ── CERT LIGHTBOX ──
+const certLightbox   = document.getElementById('certLightbox');
+const certLbImg      = document.getElementById('certLightboxImg');
+const certLbCaption  = document.getElementById('certLightboxCaption');
+const certLbClose    = document.getElementById('certLightboxClose');
+const certLbBackdrop = document.getElementById('certLightboxBackdrop');
+
+function openCertLightbox(src, caption) {
+  certLbImg.src = src;
+  certLbCaption.textContent = caption;
+  certLightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCertLightbox() {
+  certLightbox.classList.remove('active');
+  document.body.style.overflow = '';
+  setTimeout(() => { certLbImg.src = ''; }, 300);
+}
+
+// Open on clicking any cert-img-wrap
+document.querySelectorAll('.cert-img-wrap').forEach(wrap => {
+  wrap.addEventListener('click', () => {
+    const img     = wrap.querySelector('.cert-img');
+    const caption = wrap.closest('.cert-card').querySelector('.cert-name').textContent;
+    openCertLightbox(img.src, caption);
+  });
+});
+
+// Close via backdrop, close button, or Escape key
+certLbBackdrop.addEventListener('click', closeCertLightbox);
+certLbClose.addEventListener('click', closeCertLightbox);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeCertLightbox();
 });
