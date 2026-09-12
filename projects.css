@@ -476,3 +476,5 @@
 @media (max-width: 640px) {
   .sus-highlight { grid-template-columns: 1fr; margin-top: -16px; }
 }
+
+.pd-img-caption, .lb-caption { display: none !important; }
